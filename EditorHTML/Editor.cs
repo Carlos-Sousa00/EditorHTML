@@ -32,7 +32,6 @@ namespace EditorHtml
             Console.WriteLine("------------");
             Console.WriteLine("_Deseja salvar o arquivo?");
             Console.WriteLine("1 - SIM     2 - NÃO");
-            Viewer.Show(text.ToString());
             short Escolha = short.Parse(Console.ReadLine());
             short count = 0;
             while (Escolha != 1 || Escolha != 2)
@@ -55,8 +54,9 @@ namespace EditorHtml
                         file.Write(text);
                     }
                     Console.WriteLine($"Arquivo salvo com sucesso no caminho {path}");
+                    Console.WriteLine("Aperte qualquer botão para acessar a Viewer");
                     Console.ReadLine();
-                    Menu.Show();
+                    Viewer.Show(text.ToString());
                 }
                 else if (Escolha == 2)
                 {

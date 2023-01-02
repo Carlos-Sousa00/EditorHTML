@@ -48,6 +48,8 @@ namespace EditorHTML
                     Console.Write(" ");
                 }
             }
+            Console.ReadKey();
+            Menu.Show();
         }
     }
 }
